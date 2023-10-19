@@ -143,8 +143,7 @@ class GoBackN:
     ans2 = [str(i) for i in ans2]
     ans1 = ",".join(ans1)
     ans2 = ",".join(ans2)
-    print(ans1+";"+ans2)
-    # print(self.sent_by_sender[:self.packets_num], self.sent_by_reciever[:-diff])
+    print(f"\033[32m{ans1};{ans2}\033[0m")
 
 if __name__ == "__main__":
     print("\nRunning Go-Back-N....Enter your values below: \n")
