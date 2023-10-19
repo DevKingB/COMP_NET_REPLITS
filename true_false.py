@@ -31,7 +31,6 @@ def check_answer(ans):
 
 
 # Example usage
-print(check_answer("Packet switching reserves resources needed for a call from source to destination."))
 
 ans1 = input("Copy and paste answer A: ")
 ans2 = input("Copy and paste answer B: ")
