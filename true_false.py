@@ -16,26 +16,32 @@ def read_answers(file_path):
             if line == "":
                 which = False
                 true_false_dict[which] = []
-                
+
             true_false_dict[which].append(line)
 
     return true_false_dict
+
 
 def check_answer(ans):
     all_answers = read_answers("truefalse.txt")
 
     for check in all_answers.keys():
         if ans in all_answers[check]:
-                return check
+            return check
     return None
 
 
 # Example usage
+answers = """
+A. The IP (Internet Protocol) service model is a best-effort delivery service‚ and is a reliable service.
+B. At the destination host‚ UDP segments with the same destination port number but different source IP addresses and/or source port numbers will be directed to the same process via the same socket.
+C. In all version of TCP, the congestion window size is set to one MSS when a packet loss event occurs.
+D. Multiplexing is done at the sending side‚ and demultiplex is done at the receiving side.
+""".split('\n')[1:-1]
 
-ans1 = input("Copy and paste answer A: ")
-ans2 = input("Copy and paste answer B: ")
-ans3 = input("Copy and paste answer C: ")
-ans4 = input("Copy and paste answer D: ")
+answers = [answer[3:] for answer in answers]
+
+ans1, ans2, ans3, ans4 = answers
 
 A = check_answer(ans1)
 B = check_answer(ans2)
@@ -63,7 +69,7 @@ for ind, boo in enumerate(answer_list):
         if boo == True:
             print("C is True.")
         elif boo == False:
-             print("C is False.")
+            print("C is False.")
         else:
             print("C is not in the True or False list.")
     else:
@@ -73,8 +79,3 @@ for ind, boo in enumerate(answer_list):
             print("D is False.")
         else:
             print("D is not in the True or False list.")
-
-
-
-
-
