@@ -1,12 +1,12 @@
 ##########Chapter 1  - Part 2 ##########
 """In a packet-switched network (end to end)"""
 """Change these values for your question"""
-packet_size = 1800
+packet_size = 1600
 propagation_speed = 1.8 * 10**8
-link_1_transmission_rate = 160
-link_2_transmission_rate = 120
-router_processing = 3
-link_1_length = 1100
+link_1_transmission_rate = 150
+link_2_transmission_rate = 110
+router_processing = 5
+link_1_length = 1700
 link_2_length = 1700 
 
 # packet_size = 500

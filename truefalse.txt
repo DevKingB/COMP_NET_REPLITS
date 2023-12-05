@@ -15,13 +15,19 @@ In SDN, the control plane consists of an SDN controller and a set of network-con
 The purpose of the Dynamic Host Configuration Protocol is to obtain an IP address for a host attaching to an IP network.
 MAC address must be unique among all hosts in a subnet. 
 Channel partitioning protocols, random access protocols and taking-turns protocols can be used in the same network for multiple access control. Suppose two nodes are connected to the same switch. When they transmit frames at the same time, the frames will not collide.
+127.62.17.149 cannot be used on the Internet as a public IP address.
 The TTL-expired message type in ICMP is used by the traceroute program.
 Some taking-turns multiple access protocols are not decentralized.
+Link-layer switches are plug-and-play devices. They require no intervention from a network administrator or user.
 In Carrier Sense Multiple Access (CSMA) where nodes only transmit data when the channel is idle, frame collisions may still happen.
 Best-effort service really means no guarantees at all.
 If a host has more than one interface, then it may have more than one IP address at which it can be reached.
 In some multiple access protocols, frame collisions can be completely avoided.
 Openflow is an application layer protocol for the interactions between SDN controllers and SDN switches. 
+A router capable of generalized forwarding can use any header fields to make forwarding decisions.
+226.160.103.220 is a valid D class multicast IP address.
+172.30.209.131 cannot be used on the Internet as a public IP address
+The type-of-service field in the IP header contains ECN and differentiated service bits.
 The TCP protocol provides a byte stream abstraction that does not preserve boundaries between message data sent in different socket send calls at the sender. 
 The cookie value in an HTTP GET request does not mean anything by itself. It is just a value that was returned by a web server to this client during an earlier interaction.
 If a router has more than one interface, then it may have more that one IP address at which it can be reached.
@@ -58,18 +64,27 @@ For TDMA and FDMA, there is a maximum amount of time that a node knows that it w
 Multiplexing down from / multiplexing up to a network-layer protocol may be implemented in a link-layer protocol.
 For TDMA and FDMA, the maximum channel utilization is 1 (or very close to 1).
 Polling and token-passing protocols can achieve close to 100% channel utilization, in the case that all nodes always have frames to send (the fact that the utilization is close to, but not exactly, 100% is due to a small amount of medium access overhead but not due to collisions).
+Polling and token-passing protocols can achieve close 100% utilization, in the case that there is only one node that always has frames to send (the fact that the utilization is close to, but not exactly, 100% is due to a small amount of medium access overhead but not due to collisions)
+Reliable data transfer between directly connected nodes may be implemented in a link-layer protocol
 Coordinated access to a shared physical medium may be implemented in a link-layer protocol.
+172.19.72.185 cannot be used on the Internet as a public IP address
 Frames forwarded within a virtual LAN between switches can’t be vanilla 802.1 frame
 Pure Aloha and CSMA can achieve 100% utilization, in the case that there is only one node that always has frames to send.
 Consider a simple star-connected Ethernet LAN where the Ethernet switch is connected to 3 nodes A,B,C. The Ethernet switch is a learning switch, and that the switch table is initially empty. Suppose node A sends an Ethernet frame address to node B and B replies back to A. One of these two frames is also received at node C's interface.
+Software defined networking seperates the control plane from data plane in the network layer.
 IPv4 address is a network-layer address.
+IPv4 address is a 32-bit address.
 MAC address is a link-layer address.
+172.19.221.26 cannot be used on the Internet as a public IP address
+234.84.5.25 is a valid D class IP address
+The IP address 142.23.131.255 is the broadcast address in the 142.23.130.0/23 subnet
 For polling protocols, there is a maximum amount of time that a node knows that it will have to wait until it can successfully gain access to the channel.
 Two-dimensional parity check can detect any case of two bit flips in the payload.
 A self-learning switch will age-out (forget) a self-learned association of a MAC address x and switch port y if it doesn’t see a frame with MAC address x incoming on switch port y after some amount of time.
 It is impossible to detect or correct data errors without redundant data.
 Sequence number field does not exist in the Ethernet frame.
 The type field in the Ethernet frame is used to demultiplex the payload up to a higher level protocol at the receiver.
+Suppose an Ethernet frame arrives to an Ethernet switch, and the Ethernet switch does not know which of its switch ports leads to the node with the given destination MAC address. The switch will flood the frame on all ports except the port on which the frame arrived.
 The network layer of the Internet can guarantee neither minimum bandwidth nor maximum packet interarrival jitter.
 Link state routing protocols require each router to collect the information of the full network topology before routing can be calculated, distance vector protocols do not.
 OSPF routers broadcasts link-state information at least once every half an hour, or whenever there is a change in a link's state.
@@ -89,7 +104,11 @@ The IP address 27.11.175.255 is the broadcast address in the 27.11.168.0/21 subn
 OSPF itself implements reliable message transfer.
 A BGP router may not hide certain reachability information from its neighbor routers. 
 Datagrams may be discarded at input ports on routers.
-The TCP protocol provides a byte stream abstraction that does not preserve boundaries between message data sent in different socket send calls at the sender.
+
+
+ The TCP protocol provides a byte stream abstraction that does not preserve boundaries between message data sent in different socket send calls at the sender.
+
+
 If the tenth byte of an IP datagram has the value of 1, it has an ICMP packet encapsulated.
 In TDMA and FDMA, collisions will never happen.
 172.22.13.112 cannot be used on the Internet as a public IP address.
@@ -107,24 +126,29 @@ The IP address 111.159.15.255 is the broadcast address in the 111.159.0.0/20 sub
 The IP address 35.62.63.255 is the broadcast address in the 35.62.0.0/18 subnet.
 The IP address 146.71.191.255 is the broadcast address in the 146.71.128.0/18 subnet 
 The iP address 112.143.191.255 is the broadcast address in the 112.143.160.0/19 subnet
+127.90.25.94 cannot be used on the Internet as a public IP address.
 The maximum number of routers an IP datagram may traverse is 255.
 172.20.21.242 cannot be used on the Internet as a public IP address.
 The network layer is responsible for transporting packets between hosts and routers over multiple hops.
+If two hosts cannot communicate without one or more routers in between, they belong to different subnets, but the host part of their IP addresses could be the same.
 Channel partitioning protocols can achieve 100% channel utilization, in the case that all nodes always have frames to send.
 Crossbar-based switching fabrics have higher switchig rates than bus-based ones.
+The IP address 84.145.127.255 is the broadcast address in the 84.145.64.0/18 subnet.
 Since a DHCP client does not have an IP address at the beginning, the DHCP server must send the "DHCP offer" message over UDP to the IP address of 255.255.255.255 so that the client can receive the message.
 The highest A class IP subnet address is 127.0.0.0/8.
 The IP address 90.217.231.255 is the broadcast address in the 90.217.224.0/21 subnet.
 The control plane of the network layer may be implemented in a centralized fashion.
 Network control applications are not part of SDN controller. The two items can be developed independently by different developers.
 The end-to-end argument allows that some redundant functionality might be placed both in-network and at the network edge in order to enhance performance.
+The end-to-end argument advocates placing functionality at the network edge because some functionality cannot be completely and correctly implemented in the network, and so needs to be placed at the edge in any case, making in-network implementation redundant.
 DHCP is a "plug and play" protocol. It means that no manual configuration is needed for the host to join the network.
 Routers send information about their incoming and outgoing links to other routers in the network. A router exchanges messages with another router, indicating the cost for it (the sending router) to reach a destination host. This occurs in a per-router network control-plane approach.
 IPv4 datagram format is one of the principal components of the IPv4 protocol.
 A DHCP request message is sent broadcast, using the 255.255.255.255 IP destination address.
+An IP address is associated with an interface.
 A router exchanges messages with another router, indicating the cost for it (the sending router) to reach a destination host. This occurs in a per-router network control-plane approach.
 Suppose a datagram is switched through the switching fabric and arrives to its appropriate output to find that there are no free buffers. In this case, the packet will either be dropped or another packet will be removed (lost) from the buffer to make room for this packet, depending on policy, but the packet will definitely not be be sent back to the input port.
-Head of the Line (HOL) blocking means that queued datagram waiting for service at the front of a queue prevents other datagrams in queue from moving forward in the queue.
+Head of the Line (HOL) blocking means that a queued datagram waiting for service at the front of a queue prevents other datagrams in queue from moving forward in the queue.
 Retransmissions could be triggered by events other than timeouts in TCP.
 A TCP connection provides a full-duplex service and is always point-to-point.
 In the worst case of congestion, no host will receive any data even if all hosts keep sending data.
@@ -139,7 +163,6 @@ Multiplexing is done at the sending side‚ and demultiplex is done at the recei
 A type “MX” resource record in the DNS database holds the information of name and the name of the SMTP server associated with that name.
 A transport protocol can offer reliable data trinstitutional networkansfer service to an application even when the underlying network protocol is unreliable.
 Web caching uses less bandwidth coming into an institutional network where the client is located, if the cache is also located in that institutional network.
-There is not always a one-to-one correspondence between connection sockets and processes.
 There is not always a one-to-one correspondence between connection sockets and processes.
 The link layer transfer data between neighboring network devices.
 Packet switching is used in the Internet.
@@ -178,7 +201,7 @@ Althought the links in the Internet core are shared by a huge number of users, t
 An end system can have multiple network links.
 Encryption and character code conversion would be the functions in the presentation layer in the OSI reference model.
 When multiple UDP clients send UDP segments to the same destination port number at a receiving host, those segments (from different senders) will always be directed to the same socket at the receiving host.
-Transport layer segments must be encapsulated in network layer datagrams before being transmitted.
+ Transport layer segments must be encapsulated in network layer datagrams before being transmitted.
 In the client-server architecture, there is a server with a well known server IP address.
 A type “CNAME” resource record in the DNS database holds the information of an alias name and a true name for a server.
 The conditional HTTP GET request message allows a server to only send the requested object to the client if this object has changed since the server last sent this object to the client.
@@ -234,8 +257,8 @@ The internet provides both reliable and unreliable data delivery.
 Before an application layer message is transmitted into the Internet, it would have three headers added. These headers remain unchanged until the message reaches the destination host.
 ICMP messages are carried directly in IP datagrams rather than as payload in UDP or TCP segments.
 A TCP connection provides a full-duplex service and is always point-to-point.
-Routers do not examine the fields of transport-layer segments.
-An application using UDP transport can send at any rate it pleases‚ i.e. UDP does not regulate its traffic. On the contrary‚ TCP does.
+ Routers do not examine the fields of transport-layer segments.
+ An application using UDP transport can send at any rate it pleases‚ i.e. UDP does not regulate its traffic. On the contrary‚ TCP does.
 Everyone can set up his/her own DNS server.
 Routers implement the physical layer.
 A transport protocol can offer reliable data transfer service to an application even when the underlying network protocol is unreliable.
@@ -243,8 +266,8 @@ In SMTP, the server sends both the first and the last message.
 Transport-layer demultiplexing means receiving a transport-layer segment from the network layer, extracting the payload (data) and delivering the data to the correct socket.
 Head of the Line (HOL) blocking means that queued datagram waiting for service at the front of a queue prevents other datagrams in queue from moving forward in the queue.
 There are 16384 B class IP subnets and 2097152 C class IP subnets.
-The IP address 75.156.159.255 is the broadcast address in the 75.156.128.0/19 subnet.
-Bit-level error detection and correction may be implemented in a link-layer protocol.
+ The IP address 75.156.159.255 is the broadcast address in the 75.156.128.0/19 subnet.
+ Bit-level error detection and correction may be implemented in a link-layer protocol.
 In the P2P architecture, peers do not need to be always on, and may change their IP addresses or host names at any time, but they can upload to/download from each other.
 The IP address 15.195.95.255 is the broadcast address in the 15.195.64.0/19 subnet.
 127.86.211.219 cannot be used on the Internet as a public IP address.
@@ -265,12 +288,14 @@ Emails are not sent from the sender's email software directly to the receiver's 
 Emails are not sent from user agents directly to the receiver's mail server. Instead, they have to go through the sender's mail server.
 Web cookies are sent in the header lines of HTTP requests.
 In the client-server architecture, clients do not need to be always on, and may change their IP addresses or host names at any time. An HTTP request may have no header lines.
+Reliable data transfer between directly connected nodes may be implemented in a link-layer protocol.
 We can only do "best effort" data delivery on the network layer on the Internet.
 A protocol is a set of rules.
 In persistent HTTP, multiple requests may be sent to the server over a single TCP connections, and they may be sent back-to-back without waiting for the responses of previous requests.
 Authoritative DNS server provides authoritative hostname to IP mappings for organization’s named hosts.
 Proxy servers will not be able to improve access delay much if most web objects are dynamically generated.
 Two-dimensional parity check can detect and correct any case of a single bit flip in the payload.
+IPv4 address must be unique among all hosts in a subnet.
 In the client-server architecture, there is a server that is always on.
 Congestion loss and variable end-end delays are possible with packet switching.
 A protocol is involved in the following human scenario: One person asking, and getting, the time to/from another person.
@@ -281,13 +306,15 @@ In packet switching, resources are used on demand, not reserved in advance.
 Some ISPs' partition their network into multiple autonomous systems. 
 All IP addresses and domain names are ultimately managed by Internet Corporation for Assigned Names and Numbers.
 BGP messages are sent over two types of BGP connections that are actually TCP connections.
-A gateway router of an AS directly connects to one or more routers in other ASs.
+A gateway router of an AS directly connects to one oyr more routers in other ASs.
 If link costs are inversely proportional to link capacity, traffic will be discouraged from using low-bandwidth links as a result of routing that calculates least-cost paths.
 iBGP is used to propagate reachability information within an AS, and eBGP is used between ASes.
+For polling protocols, the maximum channel utilization is 1 (or very close to 1).
 Forwarding is the local action of moving arriving packets from router’s input link to appropriate router output link, while routing is the global action of determining the source-destination paths taken by packets.
 Link-layer switches are plug-and-play devices. They require no intervention from a network administrator or user.
 The link layer is the only place in the Internet protocol stack where software meets hardware.
 The transport layer transfers data between one process and another process (typically on different hosts).
+In pure Aloha and CSMA, there can be simultaneous transmissions resulting in collisions.
 By saying that the Internet is a "network of networks," we mean the Internet is made up of a lot of different networks that are interconnected to each other.
 By saying that the Internet is a "network of networks," we mean the Internet is made up of access networks at the edge, tier-1 networks at the core, and interconnected regional and content provider networks as well.
 With OSPF, a router broadcast routing information to all other routers in the same AS.
@@ -323,19 +350,23 @@ Hosts implement the transport layer.
 HTTP, SMTP, POP3 and IMAP all use the client-server architecture. 
 Packet handling conventions at routers (e.g., segmentation/reassembly) is one of the principal components of the IPv4 protocol.
 An IP subnet is a set of device interfaces that can physically reach each other without passing through an intervening router.
+239.111.8.72 is a valid D class multicast IP address
+The IP address 96.97.127.255 is the broadcast address in the 96.97.0.0/17 subnet
 Peer-to-peer is a distributed applicaiton architecture, while client-server is centralized.
 Web aching generally provides for a faster page load time at the client, if the web cache is in the client’s institutional network, because the page is loaded from the nearby cache rather than from the distant server.
+The time-to-live field in the IP header is decremented at each router; when it reaches zero, the packet must be dropped.
 A computer could be a router.
-The purpose of the Dynamic Host Configuration Protocol is to configure the interface speed to be used, for hardware like Ethernet, which can be used at different speeds.
 A DHCP request message may contain the IP address that the client will use.
 Before an application layer message is transmitted into the Internet, it would have three headers added, assuming this message can fit into a single packet.
 Both HTTP and SMTP have ASCII command/response interaction, status codes.
 When sending a username to a web server, if the GET method is used, the input is in the HTTP request line; if using the POST method, it is in the HTTP entity body.
 Hot potato routing may incur end-to-end packet transfer cost that is unnecessarily high.
 In a link-layer frame, in order of proximity to the application layer data (nearest first), the headers are from the transport layer and, network layer and, link layer.
+To determine the appropriate output port to which the arriving datagram should be directed, "match plus action" happens at the input port where a packet arrives.
 Network layer protocols are implemented in all hosts and routers
 In hierarchical OSPF, traffic flowing between non-backbone areas must go through at least at least two routers in the backbone area.
 If the time needed to establish end-to-end circuit is large, circuit-switching may be very inefficient.
+​​A control agent in router receives a complete forwarding table, which it installs and uses to locally control datagram forwarding. This occurs in a SDN control-plane approach
 The table entry for a host in an Ethernet switch table will be removed if that host doesn't transmit any frames for a certain amount of time (that is, table entries will timeout).
 Most wireless links provide multipoint connections.
 Routers within the same AS all have information about each other and run the same routing algorithm.
@@ -343,9 +374,12 @@ The more often head-of-the-line blocking occurs, the slower datagrams are forwar
 Hot potato routing may incur end-to-end packet transfer cost that is unnecessarily high
 235.244.121.142 is a valid D class IP address.
 An HTTP cookie is a code used by a server, carried on a client’s HTTP request, to access information the server had earlier stored about an earlier interaction with this Web browser.
+227.218.98.142 is a valid D class multicast IP address.
 228.79.62.49 is a valid D class multicast IP address.
+Frames forwarded within a virtual LAN between switches can’t be vanilla 802.1 frames.
 channel partitioning protocols, there can be times when the channel is idle, when a node has a frame to send, but is prevented from doing so by the medium access protocol.
 The destination MAC address of a frame may not the one mapped to the destination IP address carried by the frame.
+Polling protocols requires some form of centralized control to mediate channel access.
 TDMA and FDMA require some form of centralized control to mediate channel access.
 Looking up address bits in an arriving datagram header in the forwarding table is primarily an action in the network-layer data plane.
 Network address translation cannot handle IP datagrams properly if the payload is neither TCP nor UDP segment. 
@@ -355,36 +389,58 @@ The functions of the session layer in the OSI reference model are implemented in
 When an application uses a UDP socket, the transport service provided to the application by UDP only includes best effort service.
 An authoritative name server in the DNS provides the definitive answer to the query with respect to a name in the authoritative name server's domain.
 An HTTP cookie is a code used by a server, carried on a client’s HTTP request, to access information the server had earlier stored about an earlier interaction with this Web browser.
+Polling and token-passing protocols can achieve close 100% utilization, in the case that there is only one node that always has frames to send (the fact that the utilization is close to, but not exactly, 100% is due to a small amount of medium access overhead but not due to collisions).
 A host may receive DNS responses for the requests it never sends.
 DNS root servers are at the highest level of the DNS hierarchy, knows how to reach servers responsible for a given domain (e.g., *.com, *.edu).
 When an application uses a TCP socket, the transport service provided to the application by TCP include flow control, congestion contorl and loss-free data transfer.
 In the peer-to-peer architecture, a process requests service from those it contacts and will provide service to processes that contact it.
+Dropping a datagram due to a congested (full) output buffer is primarily an action in the network-layer data plane.
 Peer-to-peer is a distributed applicaiton architecture, while client-server is centralized.
-An HTTP request may have no header lines.
-Proxy servers will not be able to improve access delay much if most web objects are dynamically generated.
+  An HTTP request may have no header lines.
+The IP address 218.216.47.255 is the broadcast address in the 218.216.32.0/20 subnet.
+ Proxy servers will not be able to improve access delay much if most web objects are dynamically generated.
 A type “A” resource record in the DNS database holds the information of a hostname and an IP address.
+IPV6 no longer has the fields for fragmentation/reassembly, header checksum and options.
+IPv4 addressing conventions are part of the principal components of the IPv4 protocol.
+In Openflow, routers may drop packets even if the packet queue is not full.
+Two-dimensional parity check can detect any case of a single bit flip in the payload.
+224.226.127.148 is a valid D class multicast IP address.
+231.51.174.11 is a valid D class IP address
 
 Enterprise networks are a part of the Internet core.
 In polling and token-passing protocols, there can be times when the channel is idle for more than a short period of time, when a node has a frame to send, but is prevented from doing so by the medium access protocol.
 The HTTP GET request message is used by a web client to post an object on a web server.
+The IP address 215.1.15.255 is the broadcast address in the 215.1.0.0/20 subnet.
+The IP address 41.19.119.255 is the broadcast address in the 41.19.112.0/22 subnet.
+The IP address 126.40.79.255 is the broadcast address in the 126.40.72.0/19 subnet.
+172.36.245.29 cannot be used on the Internet as a public IP address
+172.35.157.46 cannot be used on the Internet as a public IP address.
+Guaranteed delivery from sending host to receiving host is a part of the Internet’s best-effort service model.
  The UDP protocol provides in-order data delivery.
+There are 16383 B class IP subnets and 2097151 C class IP subnets.
  The TCP protocol provides a guarantee on the minimum amount of throughput that will be provided between sender and receiver.
+
+
 Local DNS server provides authoritative hostname to IP mappings for organization’s named hosts.
 By saying that the Internet is a "network of networks," we mean the Internet is the largest network ever built.
  In DASH (Dynamic, Adaptive Streaming over HTTP), a server divides a video file into chunks that are stored, each encoded at multiple rates (video quality). The client receives multiple video chunks (encoded at different rates) and plays out the chunks that best fit the screen size.
  HTTP/2 has many new HTTP methods and status codes
+174.218.181.209 is a valid D class unicast IP address
 By saying that the Internet is a "network of networks," we mean the Internet is the fastest network ever built.
 Hostname-to-IP and IP-to-hostname translation are the only services provided by DNS.
 Authoritative DNS servers are responsible for a domain (e.g., *.com, *.edu); knows how to contact authoritative name servers.
 Suppose an Ethernet frame arrives to an Ethernet switch, and the Ethernet switch does not know which of its switch ports leads to the node with the given destination MAC address. The switch will use the address resolution protocol (ARP) to determine the appropriate outgoing port.
  Web URLs are case sensitive.
 The If-Modified-Since field in a HTTP GET request message indicates to the server that the client wishes to receive this object, and the time it until it which it will cache the returned object.
- Transport-layer multiplexing means receiving a transport-layer segment from the network layer, extracting the payload (data) and delivering the data to the correct socket.
+ Transport-layer multiplexing means receiving a transport-layer segment from the network layer, extracting the payload (data) and delivering the data to the correct socket.dyn
+To determine the appropriate output port to which the arriving datagram should be directed, "match plus action" happens at the output port leading to the next hop towards the destination.
 The TCP protocol provides a guarantee on the maximum amount of time needed to deliver data from sender to receiver.
 The conditional HTTP GET request message allows a server to only send the requested object to the client if the client has never requested that object before.
 The purpose of the Dynamic Host Configuration Protocol is to get the 48-bit link-layer MAC address associated with a network-layer IP address.
 Moving an arriving datagram from a router’s input port to output port is primarily an action in the network-layer data plane.
+The IP address 27.201.7.255 is the broadcast address in the 27.201.6.0/23 subnet
 Every application message is sent in a single packet.
+229.241.181.238 is a valid D class IP address
  Network layer protocols are implemented in all network devices.
 The functions of the session layer in the OSI reference model is implemented in the application layer on the Internet.
 A networking protocol defines how a user should input data into computers.
@@ -394,6 +450,7 @@ A mesh network topology is built on multipoint connections.
 A bus network topology is built on point-to-point connections.
 A LAN is a network in a lab or in a building.
 The network layer transfers data between one process and another process (typically on different hosts).
+IPV6 no longer has the fields for fragmentation/reassembly, header checksum, payload length and options.
 A type “NS” resource record in the DNS database holds the information of name and the name of the SMTP server associated with that name.
 The link layer transfers bits into and out of a transmission media.
 In a link-layer frame, in order of proximity to the application layer data (nearest first), the headers are from the application layer, transport layer and, network layer.
@@ -401,6 +458,8 @@ The link layer transfers data between one process and another process (typically
 The protocol stack of the Internet has 5 layers including a security layer.
 The transport layer protocols are part of a distributed network application.
 The network-control applications in SDN communicates with SDN-controlled switches directly.
+An IP subnet is a set of devices all manufactured by the same equipment maker/vendor.
+The purpose of the Dynamic Host Configuration Protocol is to configure the interface speed to be used, for hardware like Ethernet, which can be used at different speeds.
 An autonomous system consists of a group of hosts and routers that are under the same administrative control.
 For CSMA and CSMA/CD, there is a maximum amount of time that a node knows that it will have to wait until it can successfully gain access to the channel.
 Routing algorithms and protocols like OSPF and BGP are part of the principal components of the IPv4 protocol.
@@ -423,9 +482,12 @@ In a link-layer frame, in order of proximity to the application layer data (near
 The functions of the session layer in the OSI reference model is implemented in the application layer on the Internet.
  An HTTP cookie is a code used by a server, carried on a client’s HTTP request, to access information the server had earlier stored about an earlier interaction with this person. [Think about the distinction between a browser and a person.]
 Flow control between nodes not directly connected may be implemented in a link-layer protocol.
+Suppose a datagram is switched through the switching fabric and arrives to its appropriate output to find that there are no free buffers. In this case, the packet will be sent back to the switching fabric.
+In destination-based forwarding, after matching on the destination IP address in the datagram header, the action taken is to forward the datagram to the output port associated with that destination IP address.
 A guaranteed minimum bandwidth is provided to a source-to-destination flow of packets is a part of the Internet’s best-effort service model.
 DNS caching provides prioritized access to the root servers, since the DNS request is from a local DNS cache.
 The If-Modified-Since field in a HTTP GET request message indicates to the server that the server should replace this named object with the new version of the object attached to the GET, if the object has not been modified since the specified time
+An IP subnet is a set of devices all deployed in a small geographical area.
 The cookie value in an HTTP GET request indicates whether the user wants to use HTTP/1, HTTP/1.1, or HTTP/2 for this GET request.
 Link-layer switches have their own MAC addresses.
 Reliable data transfer between nodes not directly connected may be implemented in a link-layer protocol.
@@ -444,6 +506,7 @@ For CSMA and CSMA/CD, the maximum channel utilization is 1 (or very close to 1).
 All link layer protocols provide error correction.
 We can only do "best effort" data delivery on the transport layer on the Internet.
 With hot potato routing, two routers in the same AS always choose the same AS paths to the same prefix.
+Internet checksum can detect and correct any case of bit flips in the payload.
 The transaction ID in a DCHP request message is used to associate this message with previous messages sent by this client.
 Autonomous system numbers are IP prefixes assigned by ICANN regional registries.
 For an AS, an internal router connects only to routers within its own AS.
@@ -459,7 +522,9 @@ A unit of data (or packet) is also call datagram at the network layer, and frame
 A unit of data (or packet) is also called a datagram at the transport layer and frame at the network layer
 The SYN and FIN bit are both set to 1 in the TCP segments that are used for connection steup.
 Lookup and forwarding on the basis of an IP destination address may be implemented in a link-layer protocol.
+
 The destination IP address is ooked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens within the switching fabric.
+IP subnet addresses cannot be migrated from ISP to another, because their address prefixes will conflict with those on the routers in the original ISP
 MAC address is allocated by DHCP.
 Transport-layer multiplexing means receiving a transport-layer segment from the network layer, extracting the payload (data) and delivering the data to the correct socket.
 In all version of TCP, the congestion window size is set to one MSS when a packet loss event occurs.
@@ -473,7 +538,7 @@ On the receiving side, the transport layer extracts the transport-layer segment 
 Channel partitioning protocol can achieve 100% utilization, in the case that there is only one node that always has frames to send.
 CSMA and CSMA/CD require some form of centralized control to mediate channel access.
 When we say "HTTP is stateless", we mean an HTTP client does not remember anything about what happened during earlier steps in interacting with any HTTPserver.
-All fowarding tables are configured based on least cost paths.
+All fowarding tables are configured based on leaszt cost paths.
 ICMP communicates information between hosts and routers by marking bits in the IP header.
 Multiplexing down from / multiplexing up to a transportlayer protocol may be implemented in a link-layer protocol.
 When multiple TCP clients send TCP segments to the same destination port number at a receiving host, those segments (from different senders) will always be directed to the same socket at the receiving host.
@@ -483,10 +548,12 @@ Every TCP segment is of the same size.
 Files stored on routers can be downloaded by hosts.
 In SDN, network control applications communicate with switches directly for collecting network information and sending configurations.
 The IP address to MAC address mappings are stored in ARP tables permanently.
-All multiple access protocols can guarantee that when only one node has data to send, the node has a thrughput of R bps, where R is the full bandwidth of the shared broadcast channel.
-When we say "HTTP is stateless", we mean the HTTP protocol is not licensed in any country.
-In the client-server architecture, a process requests service from those it contacts and will provide service to processes that contact it.
-In DASH (Dynamic, Adaptive Streaming over HTTP), a server divides a video file into chunks that are downloaded smallest-chunk-first in order to maximize the number of chunks received.
+All multiple access protocols can guarantee that when only one node has data to send, the node has a throughput of R bps, where R is the full bandwidth of the shared broadcast channel.
+The destination IP address is looked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens within the routing processor.
+  When we say "HTTP is stateless", we mean the HTTP protocol is not licensed in any country.
+Head of the Line (HOL) blocking means that a queued datagram receiving service at the front of a queue prevents other datagrams in queue from receiving service.
+  In the client-server architecture, a process requests service from those it contacts and will provide service to processes that contact it.
+ In DASH (Dynamic, Adaptive Streaming over HTTP), a server divides a video file into chunks that are downloaded smallest-chunk-first in order to maximize the number of chunks received.
 A DHCP request message is sent from a DHCP server to a DHCP client.
 To determine the appropriate output port to which the arriving datagram should be directed, "match plus action" happens within the routing processor.
 The destination IP address is ooked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens at the output port leading to the next hop towards the destination. 
@@ -499,10 +566,13 @@ OSPF only allows one single path to be used when multiple paths to a destination
 A mesh network topology is built on multipoint connections
 In all routing protocols, routers must exchange their calculation results in order for the routing to complete.
 Consider a simple star-connected Ethernet LAN where the Ethernet switch is connected to 3 nodes A,B,C. The Ethernet switch is a learning switch, and that the switch table is initially empty. Suppose node A sends an Ethernet frame address to node B and B replies back to A. None of these two frames is received at node C's interface.
+Consider a simple star-connected Ethernet LAN where the Ethernet switch is connected to 3 nodes A,B,C. The Ethernet switch is a learning switch, and that the switch table is initially empty. Suppose node A sends an Ethernet frame address to node B and B replies back to A. Both of these two frames are also received at node C's interface.
 All fowarding tables are configured based on least cost paths.
 The network layer is implemented in Ethernet switches in a local area network.
 Both Both HTTP and SMTP use CRLF.CRLF to indicate end of message.
 An HTTP cookie is a code used by a client to authenticate a person’s identity to an HTTP server.
+
+
 The physical layer transfers data between one process and another process (typically on different hosts)
 IPV6 no longer has the fields for fragmentation/reassembly, header checksum, payload length and options.
 Network layer protocols are implemented in all nework devices.
@@ -540,10 +610,12 @@ In the client-server architecture, there is not a server that is always on.
 CDN streams content to hundreds of thousands of simultaneous users by serving video from a single central “mega-server” with ultra-high-speed network connectivity, and high-speed storage.
 The application layer transfers bits into and out of a transmission media.
 When an email arrives at the receiver's mail server, it is pushed to the receiver's email software immediately.
+In-order datagram payload delivery to the transport layer of those datagrams arriving to the receiving host is a part of the Internet’s best-effort service model.
 An  in the DNS is a local (to the querying host) server that caches name-to-IP address translation pairs, so it can answer authoritatively and can do so quickly.
 A CDN streams content to hundreds of thousands of simultaneous users by allowing client devices to send requested content to each other.
 In recursive DNS queries, authoritative servers send responses back to local DNS servers.
 The maximum number of routers an IP datagram may traverse is 300.
+Network applications run on hosts and routers.
 A type “CNAME” resource record in the DNS database holds the information of name and the name of the SMTP server associated with that name.
 In the client-server architecture, a process requests service from those it contacts and will provide service to processes that contact it.
 When an application uses a TCP socket, the transport service provided to the application by TCP only includes best effort service.
@@ -561,6 +633,7 @@ A type “A” resource record in the DNS database holds the information of an a
 Since a DHCP client does not have an IP address at the beginning, it must send the "DHCP discover" message to the directed broadcast address of the subnet it is in so that every host in the same subnet can receive the message.
 In all routing protocols, routers must exchange their calculation results in order for the routing to complete.
 172.15.222.224 cannot be used on the Internet as a public IP address.
+172.14.136.20 cannot be used on the Internet as a public IP address
 There are 16384 B class IP subnets and 2097151 C class IP subnets.
 A virtual LAN cannot span multiple switches.
 The conditional HTTP GET request message allows a server to only send the requested object to the client if the client is authorized to received that object
@@ -576,9 +649,12 @@ The network layer transfers bits into and out of a transmission media
 The term "encapsulation" means determining the name of the destination host, translating that name to an IP address and then placing that value in a packet header field.
 MAC address is a 32-bit address.
 A unit of data (or packet) is also call message at the network layer, and segment at the link layer.
-The purpose of a manifest file in a streaming multimedia setting is to allow a video service to log the video and the server from which a client streams a video.
-A type “A” resource record in the DNS database holds the information of name and the name of the SMTP server associated with that name.
-In the peer-to-peer architecture, there is a server that is always on.
+
+
+ The purpose of a manifest file in a streaming multimedia setting is to allow a video service to log the video and the server from which a client streams a video.
+ A type “A” resource record in the DNS database holds the information of name and the name of the SMTP server associated with that name.
+  In the peer-to-peer architecture, there is a server that is always on.
+
 Channel partitioning protocol can achieve 100% utilization, in the case that there is only one node that always has frames to send.
 In Aloha, collisions will never happen.GET
 For Aloha, the maximum channel utilization is 1 (or very close to 1).
@@ -586,12 +662,15 @@ Cylic redundancy check can detect any case of bit flips in the payload.
 In channel partitioning protocols, there can be simultaneous transmissions resulting in collisions.
 MAC address must be unique among all hosts in the Internet.
 IPv4 address is a 128-bit address.
+v
 MAC address is a 128-bit address.
+In CSMA and CSMA/CD, collisions will never happen.
 Aloha requires some form of centralized control to mediate channel access.
 Suppose an Ethernet frame arrives to an Ethernet switch, and the Ethernet switch does not know which of its switch ports leads to the node with the given destination MAC address. The switch will choose a port randomly and forward the frame there.
 The table entries in an Ethernet switch table will be removed by the STPP (Switch Table Purge Protocol) which will be used by a host to signal the switch when it (the host) is shutting down or otherwise leaving the network.
 IPv4 address is a 48-bit address.
 A self-learning switch never forgets a self-learned association of a MAC address x and switch port y.
+In Pure Aloha and CSMA, there can be times when the channel is idle, when a node has a frame to send, but is prevented from doing so by the medium access protocol.
 Suppose an Ethernet frame arrives to an Ethernet switch, and the Ethernet switch does not know which of its switch ports leads to the node with the given destination MAC address. The switch will drop the frame without forwarding it.
 For Aloha, there is a maximum amount of time that a node knows that it will have to wait until it can successfully gain access to the channel.
 IPv4 address remains the same as a host moves from one network to another.
@@ -613,13 +692,16 @@ In IPv6, the first four bits of every datagram is 0110; while in IPv4, it is 100
 The IP address 52.230.255.255 is the broadcast address in the 52.230.192.0/19 subnet.
 OSPF and BGP messages are carried by IP datagrams directly without transport layer headers added.
 Poisoned reverse can partially solve the count-to-infinity problem for link state routing protocols.
+172.85.67.167 cannot be used on the Internet as a public IP address.
 IP datagrams may be fragmented and reassembled multiple times when traversing over the Internet.
 There are 16384 B class IP subnets and 2097153 C class IP subnets.
  In IPv6, the first four bits of every datagram is 1100; while in IPv4, it is 0100.
 185.13.202.187 is a valid D class unicast IP address.
 The IP address 105.132.127.255 is the broadcast address in the 105.132.64.0/17 subnet.
 In IPv6, the first four bits of every datagram is 1100; while in IPv4, it is 0100. 
-The IP address 173.140.87.255 is the broadcast address in the 173.140.80.0/23 subnet.
+ D. The IP address 173.140.87.255 is the broadcast address in the 173.140.80.0/23 subnet.
+
+
 The HTTP GET request message is sent by a web server to a web client to get the next request from the web client.
 The IP address 187.24.15.255 is the broadcast address in the 187.24.12.0/23 subnet.
 The maximum number of routers an IP datagram may traverse is 100.
@@ -627,9 +709,14 @@ There are 16383 B class IP subnets and 2097153 C class IP subnets.
 In IPv6, the first four bits of every datagram is 0110; while in IPv4, it is 1000.
 Top Level Domain (TLD) servers are at the highest level of the DNS hierarchy, knows how to reach servers responsible for a given domain (e.g., *.com, *.edu).
 A router capable of generalized forwarding can use any packet fields to make forwarding decisions.
+202.228.252.61 is a valid D class unicast IP address
+There are 16385 B class IP subnets and 2097152 C class IP subnets.
 The DNS hierarchy includes root DNS servers, TLD DNS servers, authoritative DNS servers and local DNS servers.
+192.168.131.189 cannot be used on the Internet as a public IP address
 The highest A class IP subnet address is 127.0.0.0/10.
+The IP address 154.62.191.255 is the broadcast address in the 154.62.128.0/18 subnet
 172.55.38.55 cannot be used on the Internet as a public IP address.
+172.11.57.220 cannot be used on the Internet as a public IP address.
 In IPv6, the first four bits of every datagram is 0110; while in IPv4, it is 1000.ome
 Both hierarchical OSPF and BGP are used for inter-AS routing.
 The IP address 123.19.255.255 is the broadcast address in the 123.19.128.0/19 subnet.
@@ -638,27 +725,33 @@ The maximum number of routers an IP datagram may traverse is 300
 172.15.55.144 cannot be used on the Internet as a public IP address.
 192.168.77.213 cannot be used on the Internet as a public IP address.
 172.251.131.79 is a valid D class IP address.
+172.84.156.94 cannot be used on the Internet as a public IP address.
  There are 16384 B class IP subnets and 2097153 C class IP subnets.
 Datagram forwarding is functionality in the control plane.
 ICMP messages are only sent and received by hosts, while SNMP messages can be sent and received by both routers and hosts..
-Both TCP and UDP provide integrity checking by including error-detection fields in their segment body (a.k.a. payload).      
+Both TCP and UDP provide integrity checking by including error-detection fields in their segment body (a.k.a. payload). 
+The IP address 17.61.179.255 is the broadcast address in the 17.61.176.0/21 subnet     
 235.58.236.233 is a valid D class IP address
 The maximum number of routers an iP datagram may traverse is 63
 182.176.180.102 is a valid D class IP address
-The maximum number of routers an IP datagram may traverse is 200
+The maximum number of routers an IP datagram may traverse is 200.
 There are 16384 B class IP subnets and 2097151 C class IP subnets
 The highest A class IP subnet address is 127.0.0.0/9.
+The highest A class IP subnet address is 127.0.0.0/11.
 The checksum field in the UDP header is computed over the entire UDP segment, except the checksum field itself.
 There are 16385 B class IP subnets and 2097151 C class IP subnets
 In SDN, SDN controller calculates the routes, generates forwarding tables based on the routes, then send the forwarding tables to routers.
 163.35.125.88 is a valid D class unicast IP address.
 In destination-based forwarding, after matching on the 48-bit link-layer destination MAC address, the action taken is to forward the datagram to the output port associated with that link-layer address.
+There are 16385 B class IP subnets and 2097153 C class IP subnets.
 The maximum number of routers an IP datagram may traverse is 500
 A datagram arriving at an output port on a router must be forwarded before those datagrams arriving at the same output port later.
 If data is corrupted, IPv6 routers can detect it.
 The network layer is implemented in wired Internet-connected devices but not wireless Internet-connected devices.
 uses to locally control datagram forwarding. This occurs in a per-router network control-plane approach.
 A control agent in router receives a complete forwarding table, which it installs and uses to locally control datagram forwarding. This occurs in a per-router network control-plane approach.
+227.201.21.113 is a valid D class unicast IP address.
+234.9.120.80 is a valid D class unicast IP address
 The type-of-service field in the IP header contains a UDP or TCP segment.
 The network layer is implemented only in routers in the network core.
 SDN controller protocols are part of the principal components of the IPv4 protocol.
@@ -694,12 +787,16 @@ The physical layer delivers datagrams from a source host to a destination host (
 In the client-server architecture, clients communicate mostly with the server, sometimes between each other as well.
 In content distribution networks, servers are geographically distributed, and clients can only download data from the closest server.
 In nonpersistent HTTP, the server cannot serve multiple HTTP requests from the same client simultaneously.
+End-end path determination through multiple IP routers may be implemented in a link-layer protocol.
 Download in P2P architecture is always faster than that in client/server, because in P2P there are many peers from which data can be downloaded from.
 The Internet core includes a number of interconnected routers and servers, and is a network of networks.
 Pure Aloha and CSMA can achieve 100% channel utilization, in the case that all nodes always have frames to send.
+IPv4 address is a link-layer address.
 Link-layer switches have their own MAC addresses.
 The cookie value in an HTTP GET request is an encoding of a user email address associated with the GET request.
 The HTTP GET request message is sent by a web server to a web client to get the identity of the web client.
+The end-to-end argument advocates placing functionality at the network edge to optimize performance, such as end-end delay.
+ DHCP is a "plug and play" protocol. It means that the network provides an Ethernet jack for a host’s Ethernet adapter.
 The term "encapsulation" means receiving a “packet” from the layer below, extracting the payload field, and after some internal actions possibly delivering that payload to an upper layer protocol. 
 An authoritative name server in the DNS provides a list of TLD servers that can be queried to find the IP address of the DNS server that can provide the definitive answer to this query.
  The network layer protocols are part of a distributed network application. 
@@ -717,7 +814,7 @@ A type “MX” resource record in the DNS database holds the information of a h
 HTTP/2 allows objects in a persistent connection to be sent in a client-specified priority order.
 When we say "HTTP is stateless", we mean an HTTP client does not remember the identities of the servers with which it has interacted.
 The IP address of a hostname is always the same.
-In DASH (Dynamic, Adaptive Streaming over HTTP), a server divides a video file into chunks that are stored, each encoded at multiple rates (video quality). The client receives multiple video chunks (encoded at different rates) and plays out the chunks that best fit the screen size.
+ Hosts do not implement the physical layer.
 A local DNS server must be in the same local area network as that of the DNS clients.
 Every application message is sent in a single packet.
 Applying the idea of circuit-switching on datagram networks, we have virtual circuit networks.
@@ -768,14 +865,17 @@ The local DNS server is only contacted by a local host if that local host is una
  The Internet is a strictly hierarchical network with four levels.
 Before a packet is sent into the Internet, each layer will have its own headed prepended to the packet.
 Hosts do not implement the link layer.
-The destination IP address is looked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens at the transport layer
+The destination IP address is looked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens at the transport layer.
+The destination IP address is looked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens at the output port leading to the next hop towards the destination.
 When an application uses a UDP socket, the transport service provided to the application by UDP include congestion control, best effort service and real-time delivery
 The cookie value in an HTTP GET request encodes a default set of preferences that the user has previously specified for this web site.
+Internet checksum can detect any case of bit flips in the payload.
 The two major functions of switches are routing and forwarding.
 The upload bandwidth and download bandwidth of a network link are always asymmetrical.
+SSL is a part of the transport layer on the Internet.
 In DASH (Dynamic, Adaptive Streaming over HTTP), a server divides a video file into chunks that allow premium users to avoid watching chunks that contain commercials.
 DHCP is a "plug and play" protocol. It means that the host needs to “plug” (by wire or wirelessly) into the local network in order to access (“play” in) the Internet.
-The purpose of a manifest file in a streaming multimedia setting is to let a OTT (Over-the-top) video server know the video that the client wants to view.
+The purpose of a manifest file in a streaming multimedia setting is to let a OTT (Over-the-top) video server know the video that the client wants to view.x
 Hosts do not implement the network layer.        
 The destination IP address is ooked up in a forwarding table to determine the appropriate output port to which the datagram should be directed. This action happens within the routing processor.
 All local DNS servers always have the same hostname-to-IP translation for a given hostname.
@@ -783,19 +883,22 @@ All local DNS servers always have the same hostname-to-IP translation for a give
  It is not necessary for a device using the IP protocol to actually have an IP address associated with it.
 Transport-layer demultiplexing means taking data from multiple sockets, all associated with the same destination IP address, adding destination port numbers to each piece of data, and then concatenating these to form a transport-layer segment, and eventually passing this segment to the network layer.
 214.1.9.175 is a valid D class IP address.
+161.76.70.168 is a valid D class IP address.
+The IP address 93.163.231.255 is the broadcast address in the 93.163.230.0/24 subnet.
 Software defined network controllers are a part of router operating system.
 ICMP messages are carried in UDP segments using port number 86.
 When an application uses a UDP socket, the transport service provided to the application by UDP include best effort service, Loss-free data transfer and real-time delivery. 
 Some network applications can tolerate data loss, others cannot. The latter must use TCP as the transport service.
 In the P2P architecture, no peers are always on.
 All internet application layer protocols are public.
-A type “NS” resource record in the DNS database holds the information of a hostname and an IP address.
+ A type “NS” resource record in the DNS database holds the information of a hostname and an IP address.
 Internet checksum can detect any case of bit flips in the payload.
 The table entries in an Ethernet switch table can only be removed by the network manager, who would use the SNMP protocol to remove the entry.
 In the client-server architecture, the server is a single host.
 At least two resource records need be inserted into the authoritative server before a new domain name can be introduced into the Internet.
 In the client-server architecture, clients communicate mostly with the server, sometimes between each other as well.
 Network applications run on all Internet devices.
+Since a DHCP client does not have an IP address at the beginning, it must broadcast the "DHCP discover" message over TCP so that every host in the same subnet can receive the message.
 In DASH (Dynamic, Adaptive Streaming over HTTP), a server divides a video file into chunks that are downloaded smallest-chunk-first in order to maximize the number of chunks received.
 The table entries in an Ethernet switch table remain in the switch forever (or until it is re-booted).
 With TCP's checksum, the receiver can detect and correct errors. Therefore, TCP provides reliable data delivery.
@@ -806,11 +909,6 @@ In polling and token-passing protocols, there can be simultaneous transmissions 
 The If-Modified-Since field in a HTTP GET request message allows the server to indicate to the client that it (the client) should cache this object.
 An authoritative name server in the DNS provides the IP address of the DNS server that can provide the definitive answer to the query.
 The purpose of a manifest file in a streaming multimedia setting is to allow a video service to log the video and the server from which a client streams a video.
-The cookie value in an HTTP GET request is an encoding of a user email address associated with the GET request.
-Overall, web caching requires fewer devices/hosts to satisfy a web request, thus saving on server/cache costs.
-The purpose of a manifest file in a streaming multimedia setting is to allow a video service to log the video and the server from which a client streams a video.
 The UDP protocol provides a flow-control service that ensures that a sender will not send at such a high rate so as to overflow receiving host buffers.
-In content distribution networks, servers are geographically distributed, and clients can only download data from the closest server.
-When an email arrives at the receiver's mail server, it is pushed to the receiver's email software immediately.
-DNS uses the client-server architecture, but the whole system is distributed.
-Once a cookie is saved for a particular web server, every time when the server is visited, the client will send the cookie to the server, unless the cookie has expired or been deleted.
+Two-dimensional parity check can detect and correct any case of two bit flips in the payload.
+All link layer protocols provide reliable delivery
